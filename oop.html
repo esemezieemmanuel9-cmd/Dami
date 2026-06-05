@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP</title>
+</head>
+<body>
+    
+
+
+    <script>
+        // OOP....object oriented programming
+        let profile = {
+            name: "Murph3y",
+            age: 17,
+            address: "15,latols street",
+
+            favFruits:["Mango", "orange", "PawPaw", "Berries"],
+            Nok: {
+                name: "Jayden",
+                age: 10,
+                address:"15,latols street",
+            },
+            isOnline: true, 
+
+            callMyProfile: function(){return `My name is ${this.name}, i am ${this.age} years old, i live at ${this.address}.`}
+        };
+
+        console.log(profile.name);
+        console.log(profile.age);
+        console.log(profile.address);
+        profile.favFruits.forEach((favFruits)=>{
+            console.log(favFruits);
+
+        });
+        console.log(profile.isOnline);
+        console.log(profile.callMyProfile());
+
+         // CONSTRUCTIONS
+         function add(num1, num2){
+          let result = num1 + num2
+          return result;
+         }
+         console.log(add(20,30));
+
+         function Car(make, model, year, colour){
+            this.make = make;
+            this.model = model;
+            this.year = year;
+            this.colour = colour;
+            this.drive = function(){return`You drive the ${this.model}`;}
+            this.carYear =function(){console.log(`You bought the ${this.year} car`);}
+            this.carColour = function(){return`car colour is ${this.colour}`;}
+            this.carModel = function(){return`car model is ${this.model}`;}
+         }   
+        
+            let car1 = new Car("Ford", "Mustang", "2024", "red");
+            let car2 = new Car("Chervolet", "Camaro", "2025", "blue");
+              let car3 = new Car("Dutch", "Charger", "2026", "silver");
+
+            console.log(car1.make);
+            console.log(car1.model);
+            console.log(car1.year);
+            console.log(car1.colour);
+
+            console.log(car1.drive());
+            console.log(car2.carYear());
+
+            console.log(car1.carColour());
+            console.log(car2.carColour());  
+            console.log(car3.carColour());
+            
+            console.log(car1.carModel());
+            console.log(car2.carModel());
+            console.log(car3.carModel());
+
+          function Phone(operatingSystem, company, year, colour, ){
+            this.operatingSystem = operatingSystem;
+            this.company = company;
+            this.year = year;
+            this.colour = colour;
+            this.phoneOperatingSystem =function(){return`phone operating system is ${this.operatingSystem}`;}
+            this.phoneCompany = function(){return`phone company is ${this.company}`;}
+            this.phoneYear = function(){return`you bought the ${this.year} phone`;}
+         this.phoneColour = function(){return`phone colour is ${this.colour}`;}
+          }
+         
+            let phone1 = new Phone("Iphone13", "Iphone12", "2019", "red");
+            let phone2 = new Phone("Samsunng", "Samsung s22", "2024", "blue");
+              let phone3 = new Phone("Tecno", "Tecno pop4", "2019", "silver");
+
+              console.log(phone1.operatingSystem);
+              console.log(phone1.company);
+              console.log(phone1.year);
+              console.log(phone1.colour);
+              
+            //   console.log(phone1.phoneYear);
+            //   console.log(phone2.phoneCompany);
+
+            console.log(phone1.phoneColour());
+            console.log(phone2.phoneColour());
+            console.log(phone3.phoneColour());
+            
+            console.log(phone1.phoneCompany());
+            console.log(phone2.phoneCompany());
+            console.log(phone3.phoneCompany());
+
+            console.log(phone1.phoneOperatingSystem());
+            console.log(phone2.phoneOperatingSystem());
+            console.log(phone3.phoneOperatingSystem());
+
+            console.log(phone1.phoneYear());
+            console.log(phone2.phoneYear());
+            console.log(phone3.phoneYear());
+
+
+
+      // classes
+         class Products {
+          constructor(name, price){
+            this.name = name;
+            this.price = price;
+          }
+
+          display.Products(){
+            console.log(`Product: ${this.name}`);
+            console.log(`Product: $${this.price.toFixed(2)}`);
+
+          }
+
+          calculateTotal(salesTax){
+            return this.price + (this.price * salesTax)
+          }
+
+
+
+
+         }
+         let product1 = new Products("Laptop", 999.99);
+          let product2 = new Products("SmartPhone", 609.99);
+
+
+         product1.displayProducts();
+         console.log(`Total price with Tax: $${product1.calculateTotal(0.07).toFixed(2)}`);
+
+        product2.displayProducts();
+         console.log(`Total price with Tax: $${product1.calculateTotal(0.07).toFixed(2)}`);
+         
+
+
+
+//         operatingsystem
+//         colour
+// company
+// year
+
+// function that details the phone
+
+
+
+         
+
+
+    </script>
+</body>
+</html>
